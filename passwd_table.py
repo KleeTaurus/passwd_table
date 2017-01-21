@@ -104,4 +104,14 @@ def generate_passwd_table(repeat_times=10):
 
 
 if __name__ == '__main__':
-    print(generate_passwd_table())
+    f = open('pt.txt', 'w')
+    f.write(generate_passwd_table())
+    f.close()
+
+    message = u"""
+    !!!警告!!!
+
+    密码表文件 pt.txt 已生成，请将该文件打印后并妥善保存。
+    打印完成后需手工删除 pt.txt 文件，请勿在电脑中或互联网上保存该文件。
+    """
+    print(message)
